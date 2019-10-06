@@ -1,0 +1,74 @@
+{
+  "name": "express-ts-starter",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start:dev": "NODE_ENV=development webpack",
+    "start:prod": "NODE_ENV=production pm2 start build/index.js",
+    "run:dev": "NODE_ENV=development nodemon build/index.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.9",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-react": "^7.15.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.4.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.3",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-node-externals": "^1.7.2",
+    "webpack-shell-plugin": "^0.5.0"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@types/express": "^4.17.1",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.0",
+    "express": "^4.17.1",
+    "express-content-length-validator": "^1.0.0",
+    "helmet": "^3.21.1",
+    "mongoose": "^5.7.0",
+    "morgan": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.2.1"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "airbnb/base",
+      "plugin:import/errors"
+    ],
+    "rules": {
+      "no-use-before-define": 0,
+      "arrow-body-style": 0,
+      "dot-notation": 0,
+      "no-console": 0
+    },
+    "env": {
+      "mocha": false
+    }
+  }
+}
