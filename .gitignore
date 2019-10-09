@@ -3,3 +3,4 @@ build
 .idea
 *.lock
 log
+coverage

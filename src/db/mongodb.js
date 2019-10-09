@@ -1,15 +1,13 @@
 import Mongoose from 'mongoose';
 import logger from '../utils/logger';
-import config from '../config/config.dev';
+import config from '../config/config';
 
 Mongoose.Promise = global.Promise;
 
 const connectToDb = async () => {
-    let dbHost = config.dbHost;
-    let dbPort = config.dbPort;
-    let dbName = config.dbName;
+    const mongoUri = config.mongoUri;
     try {
-        await Mongoose.connect(`mongodb://${dbHost}:${dbPort}/${dbName}`);
+        await Mongoose.connect(mongoUri);
         logger.info('Connected to mongo!!!');
     }
     catch (err) {

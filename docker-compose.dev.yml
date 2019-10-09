@@ -1,0 +1,6 @@
+version: "2"
+services:
+  express-starter-kit-api:
+    command: yarn start:dev -- -L
+    environment:
+      - NODE_ENV=development
