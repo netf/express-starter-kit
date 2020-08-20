@@ -50,7 +50,7 @@
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/runtime": "^7.6.2",
     "@types/express": "^4.17.1",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.15.2",
     "celebrate": "^10.0.1",
     "cors": "^2.8.0",
